@@ -1,0 +1,22 @@
+GIMP Palette
+#Palette Name: palette
+#Description: exported palette
+#Colors: 18
+0	0	0	#000000
+102	102	102	#666666
+0	0	170	#0000aa
+0	170	0	#00aa00
+192	65	234	#c041ea
+135	72	0	#874800
+255	156	0	#ff9c00
+87	219	255	#57dbff
+63	63	40	#3f3f28
+170	170	138	#aaaa8a
+85	85	255	#5555ff
+85	255	85	#55ff55
+255	141	237	#ff8ded
+255	0	0	#ff0000
+255	255	85	#ffff55
+255	255	255	#ffffff
+0	0	0	#3f3f28
+0	0	0	#ff8ded
