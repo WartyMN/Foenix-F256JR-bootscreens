@@ -4,4 +4,4 @@
   "files": "main.asm",
   "output": "out.prg",
   "target": "c64"
- }
+}
