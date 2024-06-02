@@ -12,8 +12,8 @@ f = open('screens/Untitled Screen.json', 'rb')
 data = json.load(f)
 
 # arrays to hold chars and processed attribute values
-chars = []
-attrs = []
+chars = bytearray()
+attrs = bytearray()
 
 # Iterating through the json
 # list
@@ -27,10 +27,10 @@ for layer in data['layers']:
 					back_color = cell["bc"]
 					
 					if back_color == -1:
-						back_color = 1 # dark blue
+						back_color = 2 # dark blue
 										
 					if fore_color == -1:
-						fore_color = 1 # dark blue
+						fore_color = 2 # dark blue
 						
 					the_attribute_value = ((fore_color << 4) | back_color);
 
@@ -43,12 +43,14 @@ for layer in data['layers']:
 f.close()
 
 # write out data to 2 .bin binary files
-with open('f256k2_boot_chars.bin', 'w') as f:
-	for char in chars:
-		f.write('{:c}'.format(char))
+with open('f256k2_boot_chars.bin', 'wb') as f:
+	f.write(chars)
+#	for char in chars:
+		#f.write('{:c}'.format(char))
 
 
-with open('f256k2_boot_attrs.bin', 'w') as f:
-	for attr in attrs:
-		f.write('{:c}'.format(attr))
+with open('f256k2_boot_attrs.bin', 'wb') as f:
+	f.write(attrs)
+#	for attr in attrs:
+#		f.write('{:c}'.format(attr))
 
